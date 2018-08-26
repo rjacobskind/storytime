@@ -1,0 +1,8 @@
+<h1><%= @book.title %></h1>
+<%= image_tag(@book.image)%>
+<div>
+  <p>Author: <%= @book.author %></p>
+  <p>Strand Bookstore Price: $<%= @book.price / 100.00 %></p>
+  <p>Format: <%= @book.format %></p>
+  <p>ISBN13: <%= @book.isbn13 %></p>
+</div>

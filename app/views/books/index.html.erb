@@ -1,0 +1,22 @@
+<h1>Search Results</h1>
+
+<%= @books.each do |book| %>
+  <%= link_to book_path(book) do %>
+    <div>
+      <p><%= book.title %></p>
+
+      <% if book.author != '' %>
+        <p>By: <%= book.author %></p>
+      <% end %>
+
+      <% if book.isbn13 != '' %>
+        <p>ISBN13: <%= book.isbn13 %></p>
+      <% end %>
+
+      <% if book.image != '' %>
+        <%= image_tag(book.image) %>
+      <% end %>
+
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Storytime</h1>
+<h3>Search for a book</h3>
+<%= form_with scope: :book, url: books_path, method: :get, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+  <%= form.label :isbn13 %><br>
+  <%= form.text_field :isbn13 %>
+</p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+  <h4>Not sure what to search for first? Try looking for the title "Sea Escape"</h4>
+<% end %>
