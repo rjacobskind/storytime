@@ -7,3 +7,7 @@ To get it running:
 2. Run bin/rails db:migrate from your command line
 3. Run bin/rails server from your command line
 4. Go to localhost:3000 and view the app!
+
+Versions:
+* Rails 5.2.1
+* Ruby 2.3.3
