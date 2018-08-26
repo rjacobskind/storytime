@@ -1,24 +1,9 @@
-# README
+# Story Time
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This will eventually be a copycat GoodReads
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get it running:
+1. Clone this repo
+2. Run bin/rails db:migrate from your command line
+3. Run bin/rails server from your command line
+4. Go to localhost:3000 and view the app!
