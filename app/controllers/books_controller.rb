@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  # find the require_user method in application_controller.rb
+  before_action :require_user, only: [:index, :show]
+
   def index
     bookParams = params[:book]
     if (bookParams)

@@ -7,9 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag params[:controller] %>
   </head>
 
   <body>
+    #the following will display login/signup and logout buttons depending on if
+    #a current_user is associated with the session
+    <% if current_user %>
+      <ul>
+        <li><%= current_user.email %></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      </ul>
+    <% else %>
+      <ul>
+        <li><%= link_to "Login", 'login' %></a></li>
+        <li><%= link_to "Signup", 'signup' %></a></li>
+      </ul>
+  <% end %>
     <%= yield %>
   </body>
 </html>
